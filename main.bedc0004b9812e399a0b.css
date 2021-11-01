@@ -1,0 +1,271 @@
+@import url(https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap);
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+body {
+  font-size: 1.135rem;
+  font-family: "Zen Kurenaido", sans-serif;
+  background: url(2a5c78a98272558ce78e.jpeg) fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+.exit {
+  color: red;
+  cursor: pointer;
+}
+
+.toggle-links {
+  overflow-y: auto;
+  transform: translateX(-100%);
+  width: 100%;
+  position: fixed;
+  z-index: 4;
+  height: 100vh;
+  background: #92b3e8;
+  top: 0;
+  left: 0;
+  text-align: center;
+  color: white;
+  text-shadow: 0 1px 3px grey;
+}
+.toggle-links .links {
+  max-width: 85%;
+  min-width: 85%;
+  margin: 1em auto;
+}
+.toggle-links .links .nav-links {
+  list-style: none;
+  padding-left: 0;
+  font-size: 2.3rem;
+}
+.toggle-links .links .nav-links li {
+  margin: 1em 0;
+}
+.toggle-links .links .nav-links li a {
+  text-decoration: none;
+  color: white;
+}
+
+.detailed-info {
+  color: red;
+  text-shadow: none;
+}
+.detailed-info:hover {
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 0.85rem;
+  margin-left: 0.135em;
+  color: red;
+}
+
+.submit {
+  background: transparent;
+  border: none;
+}
+.submit .icon {
+  font-size: 1.5rem;
+}
+
+.close {
+  background: transparent;
+  border: none;
+  color: red;
+  font-size: 1.95rem;
+  margin: 0;
+}
+.close:hover {
+  cursor: pointer;
+}
+
+.error {
+  color: orange;
+}
+
+header {
+  min-width: 100%;
+  background: #92b3e8;
+  color: white;
+  text-align: center;
+  padding: 0.35em 0;
+  text-shadow: 0 1px 3px grey;
+  border-bottom: 1px solid grey;
+}
+header .container {
+  padding: 0.55em;
+  max-width: 90%;
+  min-width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+header .container .toggle {
+  z-index: 3;
+  background: transparent;
+  font-size: 2.5rem;
+  color: white;
+  border: none;
+}
+header .container .toggle:active {
+  transform: rotateY(60deg);
+}
+
+main {
+  margin: 20% 0;
+}
+main .container {
+  margin-bottom: 1.5em;
+  background: rgba(5, 32, 74, 0.65);
+  padding: 0.55em;
+  border-radius: 5px;
+  color: white;
+  text-shadow: 0 1px 3px grey;
+  box-shadow: 1px 1px 2px grey;
+  max-width: 90%;
+  min-width: 90%;
+  margin: 0 auto;
+  margin-bottom: 1.5em;
+}
+main .container .input {
+  margin: 0.55em 0;
+  color: white;
+  text-shadow: none;
+}
+main .container .input label {
+  display: block;
+}
+main .container .input .location-input {
+  color: grey;
+  width: 75%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid grey;
+}
+main .container .input .location-input:focus {
+  outline: none !important;
+}
+main .result-div {
+  text-align: center;
+  padding-bottom: 3.5em;
+}
+main .result-div .result {
+  margin-bottom: 1.5em;
+  background: rgba(5, 32, 74, 0.65);
+  padding: 0.55em;
+  border-radius: 5px;
+  color: white;
+  text-shadow: 0 1px 3px grey;
+  box-shadow: 1px 1px 2px grey;
+  max-width: 90%;
+  min-width: 90%;
+  margin: 0 auto;
+  margin-top: 1.5em;
+  display: none;
+}
+
+.info-div {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100vh;
+  background: transparent;
+  display: none;
+  text-align: center;
+}
+.info-div h1 {
+  color: white;
+  text-shadow: 0 1px 3px grey;
+}
+.info-div div {
+  max-width: 90%;
+  margin: 30% auto;
+  background: rgba(5, 32, 74, 0.65);
+  font-size: 1.5rem;
+  padding: 0.35em;
+  border-radius: 10px;
+  border: 2px solid white;
+}
+.info-div div div {
+  background: transparent;
+  text-align: right;
+  padding: 0;
+  margin: 0;
+}
+.info-div div p {
+  margin: 1em 0;
+  color: white;
+}
+
+@media (min-width: 35rem) {
+  body {
+    font-size: 1.6rem;
+  }
+
+  main {
+    margin: 10% 0;
+  }
+  main .container {
+    max-width: 55%;
+    min-width: 55%;
+  }
+  main .container .input .location-input {
+    font-size: 1.3rem;
+  }
+  main .result-div .result {
+    max-width: 55%;
+    min-width: 55%;
+  }
+
+  .info-div div {
+    margin-top: 25%;
+    margin-bottom: 10%;
+  }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+@keyframes fade-out {
+  from {
+    opacity: 100%;
+  }
+  to {
+    opacity: 0%;
+  }
+}
+@keyframes slide-in {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@keyframes slide-out {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
